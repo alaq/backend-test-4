@@ -10,9 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170719183956) do
+ActiveRecord::Schema.define(version: 20180319191902) do
 
   create_table "calls", force: :cascade do |t|
+    t.string "caller"
+    t.string "status"
+    t.string "callid"
+    t.integer "call_duration"
+    t.integer "recording_duration"
+    t.string "recording_url"
+    t.string "selection"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
