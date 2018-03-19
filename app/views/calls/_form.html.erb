@@ -1,0 +1,52 @@
+<%= form_with(model: call, local: true) do |form| %>
+  <% if call.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(call.errors.count, "error") %> prohibited this call from being saved:</h2>
+
+      <ul>
+      <% call.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :caller %>
+    <%= form.text_field :caller, id: :call_caller %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status, id: :call_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :callid %>
+    <%= form.text_field :callid, id: :call_callid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :call_duration %>
+    <%= form.number_field :call_duration, id: :call_call_duration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recording_duration %>
+    <%= form.number_field :recording_duration, id: :call_recording_duration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recording_url %>
+    <%= form.text_field :recording_url, id: :call_recording_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :selection %>
+    <%= form.text_field :selection, id: :call_selection %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
