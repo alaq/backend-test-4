@@ -71,9 +71,5 @@ class TwilioController < ApplicationController
       end
     end
   end
-
-  def end_call
-    puts params[:CallStatus]
-  end
 end
 

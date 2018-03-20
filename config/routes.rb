@@ -11,10 +11,4 @@ Rails.application.routes.draw do
   # callback for user entry
   match 'twilio/selection' => 'twilio#menu_selection', via: [:get, :post], as: 'menu'
 
-  match 'twilio/recording_url' => 'twilio#recording_url', via: [:get, :post]
-
-  match 'twilio/post_recording' => 'twilio#post_recording', via: [:get, :post]
-  match 'twilio/recording_callback' => 'twilio#recording_callback', via: [:get, :post]
-  match 'twilio/end_call' => 'twilio#end_call', via: [:get, :post]
-
 end
